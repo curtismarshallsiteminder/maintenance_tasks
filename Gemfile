@@ -8,7 +8,7 @@ gem "capybara"
 gem "mocha"
 gem "pry-byebug"
 gem "puma"
-gem "rails", defined?(@rails_gem_requirement) && @rails_gem_requirement
+gem 'rails', '~> 5.2', '>= 5.2.8.1'
 gem "rubocop-shopify"
 gem "selenium-webdriver"
 gem "sqlite3"

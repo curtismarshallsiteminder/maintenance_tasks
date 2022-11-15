@@ -8,15 +8,13 @@ module MaintenanceTasks
     isolate_namespace MaintenanceTasks
 
     initializer "eager_load_for_classic_autoloader" do
-      eager_load! unless Rails.autoloaders.zeitwerk_enabled?
+      eager_load!
     end
 
     config.to_prepare do
-      unless Rails.autoloaders.zeitwerk_enabled?
-        tasks_module = MaintenanceTasks.tasks_module.underscore
-        Dir["#{Rails.root}/app/tasks/#{tasks_module}/*.rb"].each do |file|
-          require_dependency(file)
-        end
+      tasks_module = MaintenanceTasks.tasks_module.underscore
+      Dir["#{Rails.root}/app/tasks/#{tasks_module}/*.rb"].each do |file|
+        require_dependency(file)
       end
     end
 

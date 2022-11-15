@@ -23,9 +23,9 @@ Gem::Specification.new do |spec|
     "#{spec.version}. To complete, please run:\n\nrails generate "\
     "maintenance_tasks:install"
 
-  spec.add_dependency("actionpack", ">= 6.0")
-  spec.add_dependency("activejob", ">= 6.0")
-  spec.add_dependency("activerecord", ">= 6.0")
+  spec.add_dependency("actionpack", ">= 5.2")
+  spec.add_dependency("activejob", ">= 5.2")
+  spec.add_dependency("activerecord", ">= 5.2")
   spec.add_dependency("job-iteration", "~> 1.1")
-  spec.add_dependency("railties", ">= 6.0")
+  spec.add_dependency("railties", ">= 5.2")
 end
