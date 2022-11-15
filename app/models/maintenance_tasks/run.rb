@@ -35,7 +35,7 @@ module MaintenanceTasks
     COMPLETED_RUNS_LIMIT = 10
     STUCK_TASK_TIMEOUT = 5.minutes
 
-    enum status: STATUSES.to_h { |status| [status, status.to_s] }
+    enum status: STATUSES.map { |status| [status, status.to_s] }.to_h
 
     validates :task_name, on: :create, inclusion: { in: ->(_) {
       Task.available_tasks.map(&:to_s)
