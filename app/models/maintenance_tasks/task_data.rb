@@ -145,6 +145,7 @@ module MaintenanceTasks
       if deleted?
         []
       else
+        byebug
         Task.named(name).attribute_names
       end
     end
