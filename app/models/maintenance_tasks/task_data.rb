@@ -146,7 +146,7 @@ module MaintenanceTasks
         []
       else
         if Task.named(name)
-          Task.named(name).new.attribute.keys
+          Task.named(name).new.attributes.keys
         end
       end
     end
