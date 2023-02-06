@@ -404,8 +404,7 @@ module MaintenanceTasks
     def task
       @task ||= begin
         task = Task.named(task_name).new
-        byebug
-        if task.attribute_names.any? && arguments.present?
+        if task.attributes.keys.any? && arguments.present?
           task.assign_attributes(arguments)
         end
         task
