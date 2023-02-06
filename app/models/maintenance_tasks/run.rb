@@ -388,6 +388,7 @@ module MaintenanceTasks
     #
     # @return [ActiveStorage::Attached::One] the attached CSV file
     def csv_file
+      byebug
       return unless defined?(ActiveStorage)
       return unless ActiveStorage::Attachment.table_exists?
 
