@@ -428,7 +428,7 @@ module MaintenanceTasks
     end
 
     def arguments_match_task_attributes
-      invalid_argument_keys = arguments.keys - task.attribute_names
+      invalid_argument_keys = arguments.keys - task.attributes.keys
       if invalid_argument_keys.any?
         error_message = <<~MSG.squish
           Unknown parameters: #{invalid_argument_keys.map(&:to_sym).join(", ")}
