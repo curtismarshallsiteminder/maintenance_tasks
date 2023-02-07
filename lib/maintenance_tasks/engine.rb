@@ -22,7 +22,6 @@ module MaintenanceTasks
       Dir["#{Rails.root}/app/tasks/#{tasks_module}/*.rb"].each do |file|
         require_dependency(file)
       end
-      MaintenanceTasks::ApplicationController.helper Rails.application.helpers
     end
 
     config.after_initialize do
