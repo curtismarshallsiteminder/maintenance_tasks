@@ -6,7 +6,7 @@ module MaintenanceTasks
   # The engine's main class, which defines its namespace. The engine is mounted
   # by the host application.
   class Engine < ::Rails::Engine
-    # isolate_namespace MaintenanceTasks
+    isolate_namespace MaintenanceTasks
 
     initializer "maintenance_tasks.eager_load_for_classic_autoloader" do
       eager_load!
