@@ -26,5 +26,7 @@ module MaintenanceTasks
     end
 
     protect_from_forgery with: :exception
+    prepend_before_action :require_authentication!
+    before_action :authorise_admin
   end
 end
