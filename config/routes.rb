@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-# MaintenanceTasks::Engine.routes.draw do
-Rails.application.routes.draw do
+MaintenanceTasks::Engine.routes.draw do
   resources :tasks, only: [:index, :show], format: false do
     member do
       put "run"
