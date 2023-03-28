@@ -31,7 +31,8 @@
       .ruby-label, .ruby-tstring-beg, .ruby-tstring-content, .ruby-tstring-end { color: #032f62; }
     </style>
 
-    <script src="/assets/javascripts/refresh.js"></script>
+    <%= javascript_include_tag '/assets/javascripts/refresh.js', nonce: true %>
+    <%# <script src="/assets/javascripts/refresh.js" nonce='true'></script> %>
   </head>
 
   <%= tag.body(data: { refresh: defined?(@refresh) && @refresh }) do %>
